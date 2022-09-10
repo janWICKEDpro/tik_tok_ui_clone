@@ -20,10 +20,6 @@ class TikTokApp extends StatelessWidget {
           visualDensity: const VisualDensity(horizontal: 2.0, vertical: 2.0),
           primaryColorLight: const Color(0xff03203C),
           primaryColorDark: const Color(0xff242B2E),
-
-          // Icon Theme
-          iconTheme:
-              const IconThemeData(color: Colors.amber, size: 15.0, opacity: 10),
         ),
         routes: {
           '/': (context) => MainFeed(),
