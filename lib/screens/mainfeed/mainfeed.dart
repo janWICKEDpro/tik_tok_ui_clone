@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tik_tok_clone/screens/mainfeed/reusables.dart';
+import 'package:tik_tok_clone/screens/mainfeed/videodisplay.dart';
 
 class MainFeed extends StatefulWidget {
   const MainFeed({super.key});
@@ -10,6 +12,40 @@ class MainFeed extends StatefulWidget {
 class _MainFeedState extends State<MainFeed> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Stack(children: [
+        PageView.builder(
+            scrollDirection: Axis.vertical,
+            itemCount: 45,
+            itemBuilder: (context, index) {
+              return Video();
+            }),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 5.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Icon(
+                Icons.home,
+                color: Colors.transparent,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [textButton("following  |"), textButton("for you")],
+              ),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.search,
+                    size: 30,
+                  ))
+            ],
+          ),
+        )
+      ]),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: SizedBox(
+          height: 70, width: 70, child: Image.asset("assets/images/adds.png")),
+    );
   }
 }

@@ -3,14 +3,14 @@ import 'package:tik_tok_clone/colors.dart';
 import 'package:tik_tok_clone/screens/mainfeed/reusables.dart';
 import 'package:video_player/video_player.dart';
 
-class MainFeed extends StatefulWidget {
-  const MainFeed({super.key});
+class Video extends StatefulWidget {
+  const Video({super.key});
 
   @override
-  State<MainFeed> createState() => _MainFeedState();
+  State<Video> createState() => _VideoState();
 }
 
-class _MainFeedState extends State<MainFeed> {
+class _VideoState extends State<Video> {
   late VideoPlayerController _controller;
 
   @override
@@ -22,6 +22,11 @@ class _MainFeedState extends State<MainFeed> {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       });
+  }
+
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
   }
 
   @override
@@ -101,9 +106,6 @@ class _MainFeedState extends State<MainFeed> {
           ),
         )
       ]),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: Container(
-          height: 70, width: 70, child: Image.asset("assets/images/adds.png")),
     );
   }
 }
