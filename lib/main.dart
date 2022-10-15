@@ -21,6 +21,6 @@ class TikTokApp extends StatelessWidget {
           primaryColorLight: const Color(0xff03203C),
           primaryColorDark: const Color(0xff242B2E),
         ),
-        routes:{}
+        home: MainFeed());
   }
 }
