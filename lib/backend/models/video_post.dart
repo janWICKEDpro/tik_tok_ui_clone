@@ -16,4 +16,8 @@ class Post {
   int? views;
   int? likes;
   Comment? comment;
+
+  factory Post.fromJson(Map<String, Object> post){
+
+  }
 }
