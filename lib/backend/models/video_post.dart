@@ -9,6 +9,7 @@ class Post {
       this.likes,
       this.link,
       this.views});
+
   String? id;
   String? uid;
   String? title;
