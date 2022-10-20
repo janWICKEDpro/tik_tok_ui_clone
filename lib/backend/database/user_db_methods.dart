@@ -31,7 +31,8 @@ class UserDatabaseMethods {
   Future<bool> updateFollowing(User? user) async {
     //to be implemented;
   }
-  Future fetchUserdata() async {
+  Future<User> getUser() async {
     //to be implemented;
   }
+  Future getUserPosts() async {}
 }
