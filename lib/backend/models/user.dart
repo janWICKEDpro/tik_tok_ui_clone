@@ -13,13 +13,13 @@ class User {
       {@required this.uid,
       this.email,
       this.password,
-      this.followers,
-      this.following,
-      this.numberOfPosts,
+      this.followers = 0,
+      this.following = 0,
+      this.numberOfPosts = 0,
       this.username});
 
   String toJson() {
-    return "{'username': $username, 'email': $email, 'password': $password, 'id': $uid, 'followers': $followers, 'following': $following, 'numberOfPosts': $numberOfPosts }";
+    return "{'USERNAME': $username, 'EMAIL': $email,'ID': $uid, 'FOLLOWERS': $followers, 'FOLLOWING': $following, 'NUMBEROFPOSTS': $numberOfPosts }";
   }
 
   factory User.fromJson(Map<String, Object>? user) {
