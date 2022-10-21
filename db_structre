@@ -1,0 +1,16 @@
+
+
+-USERS{
+    -docs(user.id){
+        UID
+        USERNAME
+        
+    }
+}
+
+-POSTS{
+    -docs(user.id){
+        POSTID...
+
+    }
+}

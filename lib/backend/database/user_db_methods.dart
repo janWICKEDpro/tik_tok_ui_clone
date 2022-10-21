@@ -25,7 +25,7 @@ class UserDatabaseMethods {
   }
 
   Future<bool> updateFollowers(User? user) async {
-    //to be implemented;
+    //todo be implemented;
   }
 
   Future<bool> updateFollowing(User? user) async {
