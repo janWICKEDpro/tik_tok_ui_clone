@@ -21,18 +21,18 @@ class UserDatabaseMethods {
   }
 
   Future<bool> deleteUser(User? user) async {
-    // to be implemented;
+    //todo: to be implemented;
   }
 
   Future<bool> updateFollowers(User? user) async {
-    //todo be implemented;
+    //todo: to be  implemented;
   }
 
   Future<bool> updateFollowing(User? user) async {
-    //to be implemented;
+    //todo: to be implemented;
   }
   Future<User> getUser() async {
-    //to be implemented;
+    //todo: to be implemented;
   }
   Future getUserPosts() async {}
 }
