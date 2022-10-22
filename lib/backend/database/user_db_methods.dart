@@ -22,15 +22,34 @@ class UserDatabaseMethods {
 
   Future<bool> deleteUser(User? user) async {
     //todo: to be implemented;
+    if (user == null) {
+      return false;
+    }
+    try {
+     await _db.collection('USERS').doc('${user.uid}').delete();
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
   }
 
-  Future<bool> updateFollowers(User? user) async {
+  Future<bool> updateField(
+    String field,
+  ) async {
     //todo: to be  implemented;
   }
 
   Future<bool> updateFollowing(User? user) async {
     //todo: to be implemented;
+    try {
+     await  _db.collection('USERS').doc('${user!.uid}').set(data)
+    } catch (e) {
+      print(e);
+      return false;
+    }
   }
+
   Future<User> getUser() async {
     //todo: to be implemented;
   }
