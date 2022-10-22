@@ -34,5 +34,7 @@ class UserDatabaseMethods {
   Future<User> getUser() async {
     //todo: to be implemented;
   }
-  Future getUserPosts() async {}
+  Future getUserPosts() async {
+    //todo: to be implememted;
+  }
 }
