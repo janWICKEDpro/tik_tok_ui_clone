@@ -21,7 +21,7 @@ class UserDatabaseMethods {
   }
 
   Future<bool> deleteUser(User? user) async {
-    //todo: to be implemented;
+  
     if (user == null) {
       return false;
     }
