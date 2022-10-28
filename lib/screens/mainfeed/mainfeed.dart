@@ -3,13 +3,15 @@ import 'package:tik_tok_clone/screens/mainfeed/reusables.dart';
 import 'package:tik_tok_clone/screens/mainfeed/videodisplay.dart';
 
 class MainFeed extends StatefulWidget {
-  const MainFeed({super.key});
+  final ValueChanged<bool>? val;
+  const MainFeed({super.key, this.val});
 
   @override
   State<MainFeed> createState() => _MainFeedState();
 }
 
 class _MainFeedState extends State<MainFeed> {
+  bool selected = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +36,9 @@ class _MainFeedState extends State<MainFeed> {
                 children: [textButton("following  |"), textButton("for you")],
               ),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.val!(true);
+                  },
                   icon: const Icon(
                     Icons.search,
                     size: 30,

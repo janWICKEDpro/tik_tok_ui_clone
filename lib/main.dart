@@ -7,8 +7,20 @@ void main() {
   runApp(const TikTokApp());
 }
 
-class TikTokApp extends StatelessWidget {
+class TikTokApp extends StatefulWidget {
   const TikTokApp({super.key});
+
+  @override
+  State<TikTokApp> createState() => _TikTokAppState();
+}
+
+class _TikTokAppState extends State<TikTokApp> {
+  bool? isPressed;
+  void _handleSearchPressed(bool val) {
+    setState(() {
+      isPressed = val;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +33,18 @@ class TikTokApp extends StatelessWidget {
           primaryColorLight: const Color(0xff03203C),
           primaryColorDark: const Color(0xff242B2E),
         ),
-        home: MainFeed());
+        home: Navigator(
+          pages: [
+            MaterialPage(
+              child: MainFeed(val: _handleSearchPressed),
+            ),
+            if (isPressed != null) const MaterialPage(child: Search()),
+          ],
+          onPopPage: (route, result) {
+            if (!route.didPop(result)) return false;
+
+            return true;
+          },
+        ));
   }
 }
