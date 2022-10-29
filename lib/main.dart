@@ -38,7 +38,6 @@ class _TikTokAppState extends State<TikTokApp> {
             MaterialPage(
               child: MainFeed(val: _handleSearchPressed),
             ),
-            if (isPressed != null) const MaterialPage(child: Search()),
           ],
           onPopPage: (route, result) {
             if (!route.didPop(result)) return false;

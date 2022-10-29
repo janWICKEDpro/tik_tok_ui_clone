@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tik_tok_clone/screens/mainfeed/reusables.dart';
 import 'package:tik_tok_clone/screens/mainfeed/videodisplay.dart';
+import 'package:tik_tok_clone/screens/search/search.dart';
 
 class MainFeed extends StatefulWidget {
   final ValueChanged<bool>? val;
@@ -37,7 +38,9 @@ class _MainFeedState extends State<MainFeed> {
               ),
               IconButton(
                   onPressed: () {
-                    widget.val!(true);
+                    // widget.val!(true);
+                    showSearch(
+                        context: context, delegate: CustomSearchDelegate());
                   },
                   icon: const Icon(
                     Icons.search,
