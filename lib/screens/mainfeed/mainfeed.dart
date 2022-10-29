@@ -24,7 +24,7 @@ class _MainFeedState extends State<MainFeed> {
               return Video();
             }),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 5.0),
+          padding: const EdgeInsets.symmetric(vertical: 45.0, horizontal: 5.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -33,7 +33,6 @@ class _MainFeedState extends State<MainFeed> {
                 color: Colors.transparent,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [textButton("following  |"), textButton("for you")],
               ),
               IconButton(
