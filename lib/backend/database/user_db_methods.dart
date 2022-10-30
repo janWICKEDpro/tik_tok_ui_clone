@@ -13,7 +13,8 @@ import '../models/user.dart';
 //     try {
 //       await _db
 //           .collection('USERS')
-//           .add(convert.jsonDecode(user.toJson()) as Map<String, dynamic>);
+//           .doc(user.uid)
+//           .set(convert.jsonDecode(user.toJson()) as Map<String, dynamic>);
 //       return true;
 //     } catch (e) {
 //       return false;
@@ -43,7 +44,7 @@ import '../models/user.dart';
 //   Future<bool> updateFollowing(User? user) async {
 //     //todo: to be implemented;
 //     try {
-//      await  _db.collection('USERS').doc('${user!.uid}').set(data)
+//      await  _db.collection('USERS').doc('${user!.uid}').update(data)
 //     } catch (e) {
 //       print(e);
 //       return false;
