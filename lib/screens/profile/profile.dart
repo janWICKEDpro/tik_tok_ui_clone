@@ -9,7 +9,9 @@ class Profile extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
           child: Column(
-        children: [],
+        children: [
+          Container();
+        ],
       )),
     );
   }
