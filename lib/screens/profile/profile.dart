@@ -10,7 +10,7 @@ class Profile extends StatelessWidget {
       body: Container(
           child: Column(
         children: [
-          Container();
+          Container(),
         ],
       )),
     );
