@@ -8,15 +8,7 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
-          child: Column(
-        children: [
-          Container(),
-          Container(),
-          Container(),
-          Container(),
-         
-        ],
-      )),
+          ),
     );
   }
 }
