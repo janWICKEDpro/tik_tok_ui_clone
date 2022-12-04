@@ -19,7 +19,7 @@ class _VideoState extends State<Video> {
     _controller = VideoPlayerController.network(
         'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4')
       ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+  
         setState(() {});
       });
   }
@@ -32,6 +32,7 @@ class _VideoState extends State<Video> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Stack(children: [
         Center(
@@ -90,7 +91,8 @@ class _VideoState extends State<Video> {
               Column(
                 children: [
                   IconButton(
-                      onPressed: () {}, icon: Icon(Icons.favorite, size: 35)),
+                      onPressed: () {},
+                      icon: const Icon(Icons.favorite, size: 35)),
                   statText("41k")
                 ],
               ),
@@ -98,13 +100,26 @@ class _VideoState extends State<Video> {
                 children: [
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.comment_sharp, size: 35)),
-                  statText("412k")
+                      icon: const Icon(Icons.comment_sharp, size: 35)),
+                  statText("402k")
                 ],
               ),
             ],
           ),
-        )
+        ),
+        Positioned(
+            top: height * 0.9,
+            right: width * 0.1,
+            child: TextButton(
+              onPressed: () {},
+              child: const Text(
+                "Jan",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            )),
       ]),
     );
   }
