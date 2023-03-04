@@ -1,2 +1,1 @@
-A tik tok clone built with flutter and firebase
-with BLoC pattern to manage state
+A clone of tik tok's UI
