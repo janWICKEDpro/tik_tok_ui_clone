@@ -1,1 +1,1 @@
-A clone of tik tok's UI
+A clone of tik tok's UI.
